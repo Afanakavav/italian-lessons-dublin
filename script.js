@@ -326,8 +326,14 @@ function startCountdown() {
 
 // Google Maps
 function initMap() {
-    // One Lime Street coordinates
-    const dublin = { lat: 53.345, lng: -6.260 };
+    try {
+        // Check if Google Maps API is loaded
+        if (typeof google === 'undefined' || !google.maps) {
+            throw new Error('Google Maps API not loaded');
+        }
+        
+        // One Lime Street coordinates (Lime St & Hanover St E intersection)
+        const dublin = { lat: 53.3455, lng: -6.2435 };
     
     const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
@@ -341,6 +347,7 @@ function initMap() {
         ]
     });
     
+    // Use traditional Marker (more compatible)
     const marker = new google.maps.Marker({
         position: dublin,
         map: map,
@@ -370,6 +377,24 @@ function initMap() {
     marker.addListener('click', function() {
         infoWindow.open(map, marker);
     });
+    
+    } catch (error) {
+        console.error('Google Maps error:', error);
+        console.log('Google object:', typeof google);
+        console.log('Google maps:', typeof google?.maps);
+        
+        // Show fallback message with more details
+        const mapContainer = document.getElementById('map');
+        mapContainer.innerHTML = `
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; background: #f8f9fa; color: #666; padding: 20px;">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🗺️</div>
+                <h3 style="margin-bottom: 1rem; color: #ce2b37;">Francesco's Italian Lessons</h3>
+                <p style="text-align: center; margin-bottom: 1rem;">One Lime Street, D02 N6C2, Dublin</p>
+                <p style="text-align: center; font-size: 0.9rem; color: #999;">Map temporarily unavailable</p>
+                <p style="text-align: center; font-size: 0.8rem; color: #999; margin-top: 1rem;">Error: ${error.message}</p>
+            </div>
+        `;
+    }
 }
 
 // Video Modal Functions
@@ -388,6 +413,11 @@ function openVideoModal() {
     } else {
         // Video not available, show message
         showNotification('Video coming soon! Contact Francesco directly for now.', 'info');
+        // Hide the video modal and show contact info instead
+        setTimeout(() => {
+            closeVideoModal();
+            showNotification('Contact Francesco directly: +353 89 404 0077', 'info');
+        }, 2000);
     }
     
     // Track video opening

@@ -6,7 +6,7 @@ const CONFIG = {
     GA_MEASUREMENT_ID: 'G-ZB1BKS5BVL', // Your Google Analytics ID for Italian Lessons Dublin
     
     // Google Maps API
-    GOOGLE_MAPS_API_KEY: 'AIzaSyCblb1fKIvNSvpHufL9FcRRPVZuK0KFLT0', // Your Google Maps API key
+    GOOGLE_MAPS_API_KEY: 'AIzaSyAf322olVztRrAIGFwqvaF5kB8s6NlbNmE', // Your new Google Maps API key
     
     // Contact Information
     CONTACT: {
@@ -30,10 +30,10 @@ const CONFIG = {
         'Friday 16:00'
     ],
     
-    // One Lime Street Map Coordinates
+    // One Lime Street Map Coordinates (Lime St & Hanover St E intersection)
     MAP_CENTER: {
-        lat: 53.345,
-        lng: -6.260
+        lat: 53.3455,
+        lng: -6.2435
     },
     
     // Special Offer Settings
