@@ -6,7 +6,7 @@ const CONFIG = {
     GA_MEASUREMENT_ID: 'G-WTT3TQN19C', // Your Google Analytics ID (update with new one if needed)
     
     // Google Maps API
-    GOOGLE_MAPS_API_KEY: 'YOUR_API_KEY', // Replace with your Google Maps API key
+    GOOGLE_MAPS_API_KEY: 'AIzaSyCblb1fKIvNSvpHufL9FcRRPVZuK0KFLT0', // Your Google Maps API key
     
     // Contact Information
     CONTACT: {
