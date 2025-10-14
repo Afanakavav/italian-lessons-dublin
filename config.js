@@ -13,7 +13,7 @@ const CONFIG = {
         email: 'francesco.perone00@gmail.com',
         phone: '+353 89 404 0077',
         whatsapp: '353894040077', // Without + sign for WhatsApp links
-        location: 'Dublin, Ireland'
+        location: 'One Lime Street, D02 N6C2, Dublin'
     },
     
     // Available Time Slots (update these with your actual availability)
@@ -30,10 +30,10 @@ const CONFIG = {
         'Friday 16:00'
     ],
     
-    // Dublin Map Coordinates
+    // One Lime Street Map Coordinates
     MAP_CENTER: {
-        lat: 53.3498,
-        lng: -6.2603
+        lat: 53.345,
+        lng: -6.260
     },
     
     // Special Offer Settings

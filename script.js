@@ -326,8 +326,8 @@ function startCountdown() {
 
 // Google Maps
 function initMap() {
-    // Dublin coordinates
-    const dublin = { lat: 53.3498, lng: -6.2603 };
+    // One Lime Street coordinates
+    const dublin = { lat: 53.345, lng: -6.260 };
     
     const map = new google.maps.Map(document.getElementById('map'), {
         zoom: 13,
@@ -361,6 +361,7 @@ function initMap() {
             <div style="padding: 10px;">
                 <h3 style="margin: 0 0 10px 0; color: #ce2b37;">Francesco's Italian Lessons</h3>
                 <p style="margin: 0;">Learn Italian in Dublin with a native speaker!</p>
+                <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;">One Lime Street, D02 N6C2, Dublin</p>
                 <p style="margin: 5px 0 0 0; font-size: 12px; color: #666;">Contact: +353 89 404 0077</p>
             </div>
         `
