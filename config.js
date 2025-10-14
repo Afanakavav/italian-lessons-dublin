@@ -3,7 +3,7 @@
 
 const CONFIG = {
     // Google Analytics
-    GA_MEASUREMENT_ID: 'G-WTT3TQN19C', // Your Google Analytics ID (update with new one if needed)
+    GA_MEASUREMENT_ID: 'G-ZB1BKS5BVL', // Your Google Analytics ID for Italian Lessons Dublin
     
     // Google Maps API
     GOOGLE_MAPS_API_KEY: 'AIzaSyCblb1fKIvNSvpHufL9FcRRPVZuK0KFLT0', // Your Google Maps API key
