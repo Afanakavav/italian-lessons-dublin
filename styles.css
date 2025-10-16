@@ -38,10 +38,22 @@ body {
     margin-bottom: 2rem;
 }
 
-.flag-green {
-    font-size: 4rem;
+.italian-flag {
     display: block;
-    animation: bounce 2s infinite;
+    margin: 0 auto 1rem auto;
+    animation: flagWave 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    transition: all 0.3s ease;
+}
+
+.italian-flag:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.4));
+}
+
+.italian-flag svg {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .main-title {
@@ -779,8 +791,28 @@ body {
     }
 }
 
+@keyframes flagWave {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-5px) rotate(1deg);
+    }
+    50% {
+        transform: translateY(-8px) rotate(0deg);
+    }
+    75% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .italian-flag svg {
+        width: 45px;
+        height: 30px;
+    }
+    
     .ciao {
         font-size: 3rem;
     }
@@ -847,6 +879,11 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+    }
+    
+    .italian-flag svg {
+        width: 40px;
+        height: 27px;
     }
     
     .ciao {
